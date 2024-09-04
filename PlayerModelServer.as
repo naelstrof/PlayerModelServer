@@ -38,7 +38,11 @@ void MapInit() {
 		string filepath = modelList[i];
 		if (filepath.EndsWith(".bmp")) {
 			g_Game.PrecacheGeneric(filepath);
-			println("PlayerModelServer: Precaching bmp" + filepath);
+			println("PlayerModelServer: Precaching bmp " + filepath);
+		}
+		if (filepath.EndsWith(".wav")) {
+			g_Game.PrecacheGeneric(filepath);
+			println("PlayerModelServer: Precaching wav " + filepath);
 		}
 		if (filepath.EndsWith(".mdl")) {
 			g_Game.PrecacheModel(filepath);
